@@ -1,0 +1,14 @@
+group = 'com.company.context'
+version = '0.0.1-SNAPSHOT'
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+buildscript {
+    ext {
+        com_h2database_version = "1.4.199"
+    }
+}
