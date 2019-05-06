@@ -14,7 +14,7 @@ public class PaymentDetail {
   private Long id;
 
   @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "id")
+  @JoinColumn(name = "payment_id")
   private Payment payment;
 
   @Column(name = "total_amount")

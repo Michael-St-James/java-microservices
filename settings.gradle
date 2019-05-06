@@ -1,5 +1,6 @@
 rootProject.name = 'java-microservices'
 
 include 'applications:shared-tomcat-server'
+
 include 'components:order-service'
 include 'components:payment-service'

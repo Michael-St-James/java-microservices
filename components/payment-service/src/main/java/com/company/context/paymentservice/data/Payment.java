@@ -17,7 +17,7 @@ public class Payment {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(mappedBy = "payment", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<PaymentDetail> paymentDetails = new ArrayList<>();
 
   @Column(name = "uuid")

@@ -35,19 +35,19 @@ public class PaymentManager {
   }
 
   public PaymentDTO newPayment(PaymentRequest paymentRequest){
+    PaymentDetail paymentDetail = new PaymentDetail();
+    paymentDetail.setCurrency(paymentRequest.getCurrency());
+    paymentDetail.setTotalAmount(BigDecimal.valueOf(paymentRequest.getAmount()));
+
+    List<PaymentDetail> paymentDetails = new ArrayList<>();
+    paymentDetails.add(paymentDetail);
+
     Payment payment = new Payment();
     payment.setUuid(UUID.randomUUID().toString());
     payment.setStatus(paymentRequest.getPaymentStatus());
-
-    PaymentDetail paymentDetail = new PaymentDetail();
-    paymentDetail.setPayment(payment);
-    paymentDetail.setCurrency(paymentRequest.getCurrency());
-    paymentDetail.setTotalAmount(BigDecimal.valueOf(paymentRequest.getAmount()));
-    List<PaymentDetail> paymentDetails = new ArrayList<>();
     payment.setPaymentDetails(paymentDetails);
 
     PaymentDTO paymentDTO = paymentService.createPayment(payment);
-
     return paymentDTO;
   }
 

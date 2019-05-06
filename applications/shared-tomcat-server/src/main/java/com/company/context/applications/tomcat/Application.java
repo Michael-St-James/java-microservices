@@ -8,12 +8,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * Sample spring-boot application.
  */
-@EntityScan("com.company.context.orderservice")
-@EnableJpaRepositories("com.company.context.orderservice")
+@EntityScan({"com.company.context.orderservice",
+    "com.company.context.paymentservice"})
+@EnableJpaRepositories({"com.company.context.orderservice",
+    "com.company.context.paymentservice"})
 @SpringBootApplication(
     scanBasePackages = {
         "com.company.context.applications.tomcat",
-        "com.company.context.orderservice"
+        "com.company.context.orderservice",
+        "com.company.context.paymentservice"
     }
 )
 public class Application {
