@@ -1,5 +1,6 @@
-package com.company.context.orderservice;
+package com.company.context.orderservice.web.intf;
 
+import com.company.context.orderservice.data.OrderStatus;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

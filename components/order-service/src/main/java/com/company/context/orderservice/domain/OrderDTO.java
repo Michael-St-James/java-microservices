@@ -1,5 +1,7 @@
-package com.company.context.orderservice;
+package com.company.context.orderservice.domain;
 
+import com.company.context.orderservice.data.OrderStatus;
+import com.company.context.orderservice.data.Order;
 import lombok.Data;
 
 @Data

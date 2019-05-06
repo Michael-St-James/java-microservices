@@ -1,5 +1,9 @@
-package com.company.context.orderservice;
+package com.company.context.orderservice.manager;
 
+import com.company.context.orderservice.data.Order;
+import com.company.context.orderservice.data.OrderStatus;
+import com.company.context.orderservice.domain.OrderDTO;
+import com.company.context.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

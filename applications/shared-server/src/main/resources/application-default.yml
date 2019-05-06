@@ -10,5 +10,5 @@ logging:
     com:
       company: INFO
     org:
-      springframework: DEBUG
-      h2: DEBUG
+      springframework: INFO
+      h2: INFO

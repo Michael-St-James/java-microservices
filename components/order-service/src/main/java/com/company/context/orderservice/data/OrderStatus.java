@@ -1,4 +1,4 @@
-package com.company.context.orderservice;
+package com.company.context.orderservice.data;
 
 public enum OrderStatus {
   SUBMITTED,

@@ -1,4 +1,4 @@
 rootProject.name = 'java-microservices'
 
-include 'applications:spring-boot-tomcat-server'
+include 'applications:shared-server'
 include 'components:order-service'

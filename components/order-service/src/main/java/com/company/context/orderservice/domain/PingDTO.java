@@ -1,4 +1,4 @@
-package com.company.context.orderservice;
+package com.company.context.orderservice.domain;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ public class PingDTO {
 
   String message;
 
-  PingDTO(String message){
+  public PingDTO(String message){
     this.message=message;
   }
 
