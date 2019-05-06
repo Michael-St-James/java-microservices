@@ -1,4 +1,4 @@
-package com.company.context.applications.shared;
+package com.company.context.applications.tomcat;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

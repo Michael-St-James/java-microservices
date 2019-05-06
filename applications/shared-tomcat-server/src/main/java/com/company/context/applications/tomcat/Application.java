@@ -1,4 +1,4 @@
-package com.company.context.applications.shared;
+package com.company.context.applications.tomcat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("com.company.context.orderservice")
 @SpringBootApplication(
     scanBasePackages = {
-        "com.company.context.applications.shared",
+        "com.company.context.applications.tomcat",
         "com.company.context.orderservice"
     }
 )
