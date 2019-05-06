@@ -4,6 +4,7 @@ import com.company.context.paymentservice.data.PaymentStatus;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +21,11 @@ public class Payment {
   @OneToMany(mappedBy = "payment", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<PaymentDetail> paymentDetails = new ArrayList<>();
 
+  @NotNull
   @Column(name = "uuid")
   private String uuid;
 
+  @NotNull
   @Column(name = "order_uuid")
   private String orderUuid;
 

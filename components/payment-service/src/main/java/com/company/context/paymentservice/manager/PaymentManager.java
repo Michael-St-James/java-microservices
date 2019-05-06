@@ -46,6 +46,7 @@ public class PaymentManager {
     payment.setUuid(UUID.randomUUID().toString());
     payment.setStatus(paymentRequest.getPaymentStatus());
     payment.setPaymentDetails(paymentDetails);
+    paymentDetail.setPayment(payment);
 
     PaymentDTO paymentDTO = paymentService.createPayment(payment);
     return paymentDTO;
