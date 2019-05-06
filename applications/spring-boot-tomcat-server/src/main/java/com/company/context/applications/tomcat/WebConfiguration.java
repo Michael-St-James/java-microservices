@@ -45,20 +45,20 @@ public class WebConfiguration extends WebSecurityConfigurerAdapter {
     return registrationBean;
   }
 
-  @Bean
-  CorsConfigurationSource corsConfigurationSource() {
-    CorsConfiguration configuration = new CorsConfiguration();
-    if (!StringUtils.isEmpty(corsAllowOrigin)) {
-      String[] allowOriginsArray = corsAllowOrigin.split(",");
-      if (allowOriginsArray != null) {
-        List<String> allowOrigins = Arrays.asList(allowOriginsArray);
-        configuration.setAllowedOrigins(allowOrigins);
-      }
-    }
-    configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-    configuration.setAllowedHeaders(Arrays.asList("*"));
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/**", configuration);
-    return source;
-  }
+//  @Bean
+//  CorsConfigurationSource corsConfigurationSource() {
+//    CorsConfiguration configuration = new CorsConfiguration();
+//    if (!StringUtils.isEmpty(corsAllowOrigin)) {
+//      String[] allowOriginsArray = corsAllowOrigin.split(",");
+//      if (allowOriginsArray != null) {
+//        List<String> allowOrigins = Arrays.asList(allowOriginsArray);
+//        configuration.setAllowedOrigins(allowOrigins);
+//      }
+//    }
+//    configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+//    configuration.setAllowedHeaders(Arrays.asList("*"));
+//    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//    source.registerCorsConfiguration("/**", configuration);
+//    return source;
+//  }
 }
