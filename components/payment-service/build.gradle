@@ -17,6 +17,7 @@ configurations {
 }
 
 dependencies {
+    implementation "com.h2database:h2:$com_h2database_version"
     implementation "org.javamoney:moneta:$org_javamoney_version"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation "org.springframework.boot:spring-boot-starter-security"

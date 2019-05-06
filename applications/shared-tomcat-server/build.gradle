@@ -23,12 +23,13 @@ dependencies {
     implementation project(":components:order-service")
     implementation project(":components:payment-service")
 
+    implementation "com.h2database:h2:$com_h2database_version"
     implementation "org.springframework.boot:spring-boot-starter-actuator", withoutSlf4j
     implementation "org.springframework.boot:spring-boot-starter-data-jpa", withoutSlf4j
     implementation "org.springframework.boot:spring-boot-starter-security", withoutSlf4j
     implementation "org.springframework.boot:spring-boot-starter-web", withoutSlf4j
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
-    implementation "com.h2database:h2:$com_h2database_version"
+   
     compileOnly "org.projectlombok:lombok"
     annotationProcessor "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test", withoutSlf4j
