@@ -1,4 +1,4 @@
-package com.company.context.orderservice.domain;
+package com.company.context.paymentservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;

@@ -31,7 +31,7 @@ public class OrderController {
   @GetMapping("/ping")
   public ResponseEntity ping(HttpServletRequest request){
     log.info("message=\"order-service ping request received\" request=\"{}\"", request.getRemoteAddr());
-    return ResponseEntity.ok(new PingDTO("Successfully pinged order service"));
+    return ResponseEntity.ok(new PingDTO("Successfully pinged order-service"));
   }
 
   @GetMapping(value = {"/{uuid}"})

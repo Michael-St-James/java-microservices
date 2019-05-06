@@ -10,5 +10,6 @@ subprojects {
 buildscript {
     ext {
         com_h2database_version = "1.4.197"
+        org_javamoney_version = "1.3"
     }
 }
