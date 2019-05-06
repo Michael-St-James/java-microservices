@@ -9,6 +9,6 @@ subprojects {
 
 buildscript {
     ext {
-        com_h2database_version = "1.4.199"
+        com_h2database_version = "1.4.197"
     }
 }

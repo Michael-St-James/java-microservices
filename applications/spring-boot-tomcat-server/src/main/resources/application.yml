@@ -12,6 +12,9 @@ server:
       file-date-format: ''
 
 spring:
+  h2:
+    console:
+        enabled: true
   jackson:
     property-naming-strategy: SNAKE_CASE
     default-property-inclusion: non_null
@@ -20,7 +23,7 @@ spring:
     time-zone: UTC
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true

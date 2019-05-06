@@ -1,0 +1,14 @@
+spring:
+  mvc:
+    dispatch-options-request: true
+  datasource:
+    password: ''
+    url: jdbc:h2:mem:testdb;mode=mysql;DB_CLOSE_ON_EXIT=TRUE
+    username: sa
+logging:
+  level:
+    com:
+      company: INFO
+    org:
+      springframework: DEBUG
+      h2: DEBUG
