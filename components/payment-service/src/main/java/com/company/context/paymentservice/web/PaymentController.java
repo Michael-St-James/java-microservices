@@ -39,10 +39,10 @@ public class PaymentController {
   public ResponseEntity getPayment(@PathVariable Optional<String> uuid,  @RequestParam(name = "order_uuid") Optional<String> orderUuid){
     PaymentDTO paymentDTO;
     if(uuid.isPresent()) {
-      log.info("message=\"payment-service GET request received\" uuid=\"{}\"", uuid);
+      log.info("message=\"payment-service GET request received\" uuid=\"{}\"", uuid.get());
       paymentDTO = paymentManager.getPayment(uuid.get());
     } else if(orderUuid.isPresent()){
-      log.info("message=\"payment-service GET request received\" uuid=\"{}\"", uuid);
+      log.info("message=\"payment-service GET request received\" order_uuid=\"{}\"", orderUuid.get());
       paymentDTO = paymentManager.getPaymentByOrderUuid(orderUuid.get());
     } else {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid parameters");

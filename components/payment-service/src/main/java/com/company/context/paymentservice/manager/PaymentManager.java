@@ -44,6 +44,7 @@ public class PaymentManager {
 
     Payment payment = new Payment();
     payment.setUuid(UUID.randomUUID().toString());
+    payment.setOrderUuid(paymentRequest.getOrderUuid());
     payment.setStatus(paymentRequest.getPaymentStatus());
     payment.setPaymentDetails(paymentDetails);
     paymentDetail.setPayment(payment);
