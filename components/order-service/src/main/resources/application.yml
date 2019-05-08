@@ -10,11 +10,14 @@ server:
       buffered: false
       suffix: ''
       file-date-format: ''
-
 spring:
+  flyway:
+    locations: classpath:db/order/migrations
+    table: _schema_history
+    schemas: order
   h2:
     console:
-        enabled: true
+      enabled: true
   jackson:
     property-naming-strategy: SNAKE_CASE
     default-property-inclusion: non_null
@@ -23,10 +26,11 @@ spring:
     time-zone: UTC
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
     properties:
       hibernate:
+        default_schema: order
         format_sql: true
         jdbc:
           time_zone: UTC
-    show-sql: false
+    show-sql: true

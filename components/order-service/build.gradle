@@ -1,4 +1,5 @@
 plugins {
+    id "org.flywaydb.flyway" version "5.2.4"
     id "org.springframework.boot" version "2.1.4.RELEASE"
     id "java"
 }
@@ -17,12 +18,14 @@ configurations {
 }
 
 dependencies {
+    implementation "org.flywaydb:flyway-core:$org_flywaydb_version"
     implementation "com.h2database:h2:$com_h2database_version"
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation "org.springframework.boot:spring-boot-starter-security"
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "org.springframework.boot:spring-boot-starter-log4j2"
+    implementation "mysql:mysql-connector-java"
     compileOnly "org.projectlombok:lombok"
     annotationProcessor "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
