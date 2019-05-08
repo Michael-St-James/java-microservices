@@ -12,9 +12,9 @@ server:
       file-date-format: ''
 spring:
   flyway:
-    locations: classpath:db/order/migrations
+    locations: classpath:db/transaction/migrations
     table: _schema_history
-    schemas: order
+    schemas: TRANSACTION
   h2:
     console:
       enabled: true
@@ -29,8 +29,8 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        default_schema: order
+        default_schema: TRANSACTION
         format_sql: true
         jdbc:
           time_zone: UTC
-    show-sql: true
+    show-sql: false
