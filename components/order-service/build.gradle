@@ -30,4 +30,12 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.springframework.security:spring-security-test"
+    testImplementation "org.junit.jupiter:junit-jupiter:${org_junit_version}"
+}
+
+test {
+    useJUnitPlatform {
+        excludeTags 'slow', 'gradle-skip'
+    }
+    systemProperty 'java.util.logging.manager', 'org.apache.logging.log4j.jul.LogManager'
 }
