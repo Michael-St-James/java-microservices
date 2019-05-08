@@ -1,6 +1,7 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.4.RELEASE'
-    id 'java'
+    id "org.flywaydb.flyway" version "5.2.4"
+    id "org.springframework.boot" version "2.1.4.RELEASE"
+    id "java"
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -18,6 +19,7 @@ configurations {
 
 dependencies {
     implementation "com.h2database:h2:$com_h2database_version"
+    implementation "org.flywaydb:flyway-core:$org_flywaydb_version"
     implementation "org.javamoney:moneta:$org_javamoney_version"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation "org.springframework.boot:spring-boot-starter-security"

@@ -10,8 +10,11 @@ server:
       buffered: false
       suffix: ''
       file-date-format: ''
-
 spring:
+  flyway:
+    locations: classpath:db/payment/migrations
+    table: _schema_history
+    schemas: payment
   h2:
     console:
         enabled: true
@@ -23,10 +26,11 @@ spring:
     time-zone: UTC
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
     properties:
       hibernate:
+        default_schema: payment
         format_sql: true
         jdbc:
           time_zone: UTC
-    show-sql: false
+    show-sql: true

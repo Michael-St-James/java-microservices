@@ -1,13 +1,13 @@
 ## `/applications`
 
-This folder is used for grouping components together into a single application runtime. It is not required.
+This folder is used for grouping components together into a single application runtime. It is not required. Components should generally not be deployed together unless the company's hosting solution is limited.
 
 #####  Use cases for grouping components:
 1. Reduce complexity of infrastructure and orchestration
 
     By grouping our components together into a single runtime instance we can greatly reduce the amount of infrastructure required to run those components down to a single server. Additionally we do not need to define individual configurations for every component in the group. 
 
-3. Testing or developing against a single application instance
+2. Testing or developing against a single application instance
 
     It is much easier to run a collection of microservices with a single click if they are bundled into the same application.
 

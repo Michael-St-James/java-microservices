@@ -10,6 +10,7 @@ This folder is used to store the source code of individual microservices.
 - scheduled jobs
 
 #####  What is a microservice?
+- [12 Factor Application](https://12factor.net/)
 - A service built around business capabilties
 - Runs on it's own process
 - Independently deployable
@@ -23,5 +24,5 @@ This folder is used to store the source code of individual microservices.
 - Data access layers
 - Service configuration
 - Application configuration
-- Database migration files (Should have its own schema!)
+
 
